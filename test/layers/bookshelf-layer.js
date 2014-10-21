@@ -5,6 +5,9 @@ var userDummy = require('../dummy/user');
 var rolesDummy = require('../dummy/roles');
 var permissionsDummy = require('../dummy/permissions');
 
+userDummy.toJSON = function () {
+  return this;
+};
 
 describe('Bookshelf Layer', function () {
   var layer = undefined;
@@ -47,5 +50,7 @@ describe('Bookshelf Layer', function () {
     expect(layer.hasPermission(permissionsDummy)).to.equal(true);
     expect(layer.can('sing-all-day-long')).to.equal(false);
     expect(layer.hasPermission('sing-all-day-long')).to.equal(false);
+
+    expect(layer.getPermissions().length).to.equal(3);
   });
 });
