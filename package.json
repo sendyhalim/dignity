@@ -7,7 +7,7 @@
     "dignity": "./lib/dignity-command.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter spec test/layers/"
   },
   "author": "Sendy Halim",
   "license": "ISC",
