@@ -1,4 +1,4 @@
-var BookshelfLayer = require('./layers/bookshelf-layer');
+var BookshelfLayer = require('./lib/layers/bookshelf-layer');
 
 
 var analyzeDignity = function analyzeDignity (user, orm) {
