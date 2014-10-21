@@ -1,11 +1,18 @@
 module.exports = {
-  permissions: [
-    { name: 'Googling' },
-    { name: 'Playing' },
-    { name: 'watCHing' }
-  ],
   roles: [
-    { name: 'editor' },
-    { name: 'ironmAn' }
+    {
+      name: 'editor',
+      permissions: [
+        { name: 'Googling' },
+        { name: 'WatchiNG' }
+      ]
+    },
+    {
+      name: 'ironmAn',
+      permissions: [
+        { name: 'Playing' },
+        { name: 'watCHing' }
+      ]
+    }
   ]
 };
