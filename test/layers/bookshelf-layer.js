@@ -3,7 +3,7 @@ var sinon = require('sinon');
 var BookshelfLayer = require('../../lib/layers/bookshelf-layer');
 var rolesDummy = require('../dummy/roles');
 var permissionsDummy = require('../dummy/permissions');
-var models = require('../models/bookshelf');
+var models = require('../models');
 
 describe('Bookshelf Layer', function () {
   this.timeout(15000);
@@ -11,8 +11,8 @@ describe('Bookshelf Layer', function () {
   var user;
 
   before(function (done) {
-    models.insertData.then(function (r) {
-      (new models.User({
+    models.prepareDummyData().then(function (r) {
+      (new models.bookshelf.User({
         id: 1
       }))
       .fetch()
