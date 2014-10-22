@@ -12,15 +12,17 @@
   "author": "Sendy Halim",
   "license": "ISC",
   "dependencies": {
-    "bookshelf": "^0.7.7",
     "commander": "^2.4.0",
-    "knex": "^0.7.3",
     "lodash": "^2.4.1"
   },
   "devDependencies": {
+    "bluebird": "^2.3.6",
+    "knex": "^0.7.3",
+    "bookshelf": "^0.7.7",
     "chai": "^1.9.2",
     "mocha": "^1.21.5",
     "pg": "^3.6.1",
-    "sinon": "^1.10.3"
+    "sinon": "^1.10.3",
+    "sqlite3": "^3.0.2"
   }
 }
