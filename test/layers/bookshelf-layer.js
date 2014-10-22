@@ -1,34 +1,41 @@
 var expect = require('chai').expect;
 var sinon = require('sinon');
 var BookshelfLayer = require('../../lib/layers/bookshelf-layer');
-var userDummy = require('../dummy/user');
 var rolesDummy = require('../dummy/roles');
 var permissionsDummy = require('../dummy/permissions');
-
-userDummy.toJSON = function () {
-  return this;
-};
+var models = require('../models/bookshelf');
 
 describe('Bookshelf Layer', function () {
-  var layer = undefined;
-  var user = {
-    load: function (){}
-  };
+  this.timeout(15000);
+  var layer;
+  var user;
 
   before(function (done) {
-    sinon.stub(user, 'load').returns({
-      then: function (callback){
-        callback(userDummy);
-      }
+    models.insertData.then(function (r) {
+      (new models.User({
+        id: 1
+      }))
+      .fetch()
+      .then(function (result) {
+        user = result;
+        done();
+      });
     });
-
-    done();
   });
 
+  after(function (done) {
+    var fs = require('fs');
+    // delete sqlite file
+    fs.unlinkSync(__dirname + '/../../bookshelfjs-test.sqlite');
+    done()
+  });
+
+  // create new layer and analyze user's roles and permissions for each test
   beforeEach(function (done) {
     layer = new BookshelfLayer(user);
-    layer.analyzeDignity();
-    done();
+    layer.analyzeDignity().then(function (newLayer) {
+      done();
+    });
   });
 
   it('should have permissions as an array', function () {
