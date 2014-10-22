@@ -27,6 +27,7 @@ describe('Bookshelf Layer', function () {
 
   beforeEach(function (done) {
     layer = new BookshelfLayer(user);
+    layer.analyzeDignity();
     done();
   });
 
