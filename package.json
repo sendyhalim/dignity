@@ -17,10 +17,11 @@
   },
   "devDependencies": {
     "bluebird": "^2.3.6",
-    "knex": "^0.7.3",
     "bookshelf": "^0.7.7",
     "chai": "^1.9.2",
+    "knex": "^0.7.3",
     "mocha": "^1.21.5",
+    "sequelize": "^2.0.0-rc2",
     "sinon": "^1.10.3",
     "sqlite3": "^3.0.2"
   }
