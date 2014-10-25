@@ -78,8 +78,5 @@ Permission.hasMany(Role, {
 module.exports = {
   User: User,
   Role: Role,
-  Permission: Permission,
-  sync: function () {
-    return sequelize.sync();
-  }
+  Permission: Permission
 };
