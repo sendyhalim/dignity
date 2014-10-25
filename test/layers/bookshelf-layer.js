@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
 var sinon = require('sinon');
-var BookshelfLayer = require('../../lib/layers/bookshelf-layer');
+var BookshelfLayer = require('../../').BookshelfLayer;
 var rolesDummy = require('../dummy/roles');
 var permissionsDummy = require('../dummy/permissions');
 var models = require('../models');

@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
 var sinon = require('sinon');
-var SequelizeLayer = require('../../lib/layers/sequelize-layer');
+var SequelizeLayer = require('../../').SequelizeLayer;
 var rolesDummy = require('../dummy/roles');
 var permissionsDummy = require('../dummy/permissions');
 var models = require('../models');
