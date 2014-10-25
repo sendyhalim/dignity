@@ -2,7 +2,10 @@ var Sequelize = require('sequelize');
 var sequelize = new Sequelize('', '', '', {
     dialect: 'sqlite',
     storage: './sequelize-test.sqlite',
-    logging: false
+    define: {
+      // disable sync on association, for sequelize ^1.0.0
+      syncOnAssociation: false
+    },
 });
 
 module.exports = sequelize;
