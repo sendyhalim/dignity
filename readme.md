@@ -8,7 +8,7 @@ Dignity is a node js module that creates a layer based on user to check his/her 
 
 Quick use:
 
-```
+```js
 var dignity = require('dignity');
 
 // sequelize
