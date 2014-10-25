@@ -43,7 +43,7 @@ User.find(userId).then(function (result) {
 });
 ```
 
-To use `dignity` properly, you need to have follow these conventions:
+To use `dignity` properly, you have to follow these conventions:
 
 * Many to Many relation between `User` and `Role`, the name of the relation in User must be `roles`
 * Many to Many relation between `Role` and `Permission`, the name of the relation in Role must be `permissions`
@@ -56,6 +56,14 @@ Steps:
 * init the knexfile `knex init` and input your db config in `knexfile.js`
 * create the migration `dignity create-migration` or `dignity create-migration > ./migrations/dignity-migration.js`
 * now you can run the migration `knex migrate:latest` :D
+
+## Layer API
+* `getUser()` get the user.
+* `setUser(user)` set user,it will automaticaly run `analyzeDignity`, so u can use it like this `layer.setUser(user).then(function () { /* do something */ })`.
+* `getPermissions()` returns an array of permissions.
+* `getRoles()` returns an array of roles.
+* `is(String|Array)` check role, example `layer.is('ironman')` `layer.is(['ironman', 'admin'])`. For array convention, it returns true satisfy if user has one of the given roles.
+* `can(String|Array)` check permission, example `layer.can('playing')` `layer.is(['playing', 'edit post'])`. For array. convention, it returns true satisfy if user has one of the given permission
 
 ## Testing
 You must have `sqlite3` installed in your system, `npm test`
