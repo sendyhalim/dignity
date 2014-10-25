@@ -1,7 +1,7 @@
 {
   "name": "dignity",
   "version": "0.0.1",
-  "description": "",
+  "description": "A simple layer for creating and checking user roles/permissions",
   "main": "index.js",
   "bin": {
     "dignity": "./lib/dignity-command.js"
@@ -9,8 +9,20 @@
   "scripts": {
     "test": "mocha --reporter spec test/layers/"
   },
-  "author": "Sendy Halim",
-  "license": "ISC",
+  "author": "Sendy Halim <sendyhalim93@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sendyHalim/dignity.git"
+  },
+  "keywords": [
+    "dignity",
+    "user",
+    "permissions",
+    "roles",
+    "acl"
+  ],
+  "readmeFilename": "README.md",
   "dependencies": {
     "commander": "^2.4.0",
     "lodash": "^2.4.1"
@@ -24,5 +36,8 @@
     "sequelize": "^1.6.0",
     "sinon": "^1.10.3",
     "sqlite3": "^3.0.2"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
   }
 }
