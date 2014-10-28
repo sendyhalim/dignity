@@ -8,9 +8,8 @@ Dignity is a node js module that creates a layer based on user to check his/her 
 * [Bookshelf](https://github.com/tgriesser/bookshelf)
 * [Sequelize](https://github.com/sequelize/sequelize)
 
-## IMPORTANT
-FOR SEQUELIZE ONLY 
-You need to define class method in your model definition for:
+## Important
+For ORM: `sequelize`, you need to define class method in your model definition for:
 * `Role::getPermissionModel` for Role model in here's an example
   
   ```js
@@ -109,6 +108,11 @@ Steps:
 ## Testing
 You must have `sqlite3` installed in your system, `npm test`
 
-## NOTE
+## Note
 For now `dignity` leaves the creation of roles and permissions by yourself since it's responsibility is only to check the `dignity` of the given user.
 
+## Next?
+I'm planning (or we, there's pull request button hehe..) to make layer for each of these orm (you may submit a pull request to this readme if there's an ORM(s) I haven't listed):
+
+* [Juggling DB](https://github.com/1602/jugglingdb)
+* [Node ORM 2](https://github.com/dresende/node-orm2)
