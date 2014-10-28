@@ -9,9 +9,9 @@ Dignity is a node js module that creates a layer based on user to check his/her 
 * [Sequelize](https://github.com/sequelize/sequelize)
 
 ## Important
-For ORM: `sequelize`, you need to define class method in your model definition for:
-* `Role::getPermissionModel` for Role model in here's an example
-  
+For ORM: `sequelize`, you need to define `classMethods` in your model definition for:
+* `Role::getPermissionModel` for Role model, here's an example
+
   ```js
   var Role = sequelize.define('roles', {
   		id: Sequelize.INTEGER,
@@ -25,9 +25,9 @@ For ORM: `sequelize`, you need to define class method in your model definition f
   		}
   	}
   });
-  ``` 
-* `User::getRoleModel` for User model in here's an example
- 
+  ```
+* `User::getRoleModel` for User model, here's an example
+
   ```js
   var User = sequelize.define('users', {
   		id: Sequelize.INTEGER,
@@ -42,7 +42,7 @@ For ORM: `sequelize`, you need to define class method in your model definition f
   	}
   });
   ```
-  
+
 [complete example](https://github.com/sendyHalim/dignity/blob/master/test/models/sequelize-models/index.js)
 
 
