@@ -11,10 +11,7 @@
   },
   "author": "Sendy Halim <sendyhalim93@gmail.com>",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/sendyHalim/dignity.git"
-  },
+  "repository": "sendyHalim/dignity",
   "keywords": [
     "dignity",
     "user",
