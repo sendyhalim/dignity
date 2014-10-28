@@ -13,7 +13,7 @@ FOR SEQUELIZE ONLY
 You need to define class method in your model definition for:
 * `Role::getPermissionModel` for Role model in here's an example
   
-  ```
+  ```js
   var Role = sequelize.define('roles', {
   		id: Sequelize.INTEGER,
   		name: Sequelize.STRING
@@ -29,7 +29,7 @@ You need to define class method in your model definition for:
   ``` 
 * `User::getRoleModel` for User model in here's an example
  
-  ```
+  ```js
   var User = sequelize.define('users', {
   		id: Sequelize.INTEGER,
   		name: Sequelize.STRING
