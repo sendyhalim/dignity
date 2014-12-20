@@ -2,7 +2,7 @@ Dignity
 -----
 Dignity is a node js module that creates a layer based on user to check his/her roles and permissions
 
-[![Build Status](https://travis-ci.org/sendyHalim/dignity.svg)](https://travis-ci.org/sendyHalim/dignity)
+[![Build Status](https://travis-ci.org/sendyhalim/dignity.svg)](https://travis-ci.org/sendyhalim/dignity)
 
 ## ORMs Covered (for now)
 * [Bookshelf](https://github.com/tgriesser/bookshelf)
